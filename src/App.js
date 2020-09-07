@@ -15,15 +15,15 @@ const itemList = [
 function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    setTimeout(() => setLoading(false), 6000);
+    setTimeout(() => setLoading(false), 8000);
   }, []);
 
   return (
     <AppContainer>
-      {<PaneBox>
+      {!loading && <PaneBox>
         {itemList.map((item, index) => <Item key={`item-${index}`} item={item} />)}
       </PaneBox>}
-      {/* <Splash /> */}
+      <Splash />
     </AppContainer>
   );
 }

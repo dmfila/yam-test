@@ -6,7 +6,7 @@ const Item = ({ item }) => {
     <ItemContainer href="https://pylon.finance">
       <ItemWrapper background={item.back}>
         <Row>
-          <img src={require(`../assets/${item.icon}.png`)} alt="default" width="40%"/>
+          <img src={require(`../assets/${item.icon}.png`)} alt="" width="40%"/>
         </Row>
         <Title>{item.title}</Title>
         <DescText>{item.desc}</DescText>

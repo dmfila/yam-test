@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Loading = ({ item }) => {
   return (
     <LoadingContainer>
-      <img src={require("../assets/logo.png")} />
+      <img src={require("../assets/logo.png")} alt=""/>
       <ProgressBar>
         <div className="progress-value"></div>
       </ProgressBar>
