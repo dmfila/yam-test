@@ -15,15 +15,15 @@ const itemList = [
 function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    setTimeout(() => setLoading(false), 1000);
+    setTimeout(() => setLoading(false), 6000);
   }, []);
 
   return (
     <AppContainer>
-      {!loading && <PaneBox>
+      {<PaneBox>
         {itemList.map((item, index) => <Item key={`item-${index}`} item={item} />)}
       </PaneBox>}
-      <Splash />
+      {/* <Splash /> */}
     </AppContainer>
   );
 }
@@ -34,13 +34,14 @@ const AppContainer = styled.div`
   display: flex;
   align-items: center;
   /* width: 100vw; */
-  /* height: 100%; */
+  min-height: 100vh;
   background: url(${require('./assets/background.jpg')});
   background-size: cover;
 `;
 
 const PaneBox = styled.div`
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   padding: 10px;
 `;

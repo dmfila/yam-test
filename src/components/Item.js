@@ -6,7 +6,7 @@ const Item = ({ item }) => {
     <ItemContainer href="https://pylon.finance">
       <ItemWrapper background={item.back}>
         <Row>
-          <img src={require(`../assets/${item.icon}.png`)} width="40%" alt="default" />
+          <img src={require(`../assets/${item.icon}.png`)} alt="default" width="40%"/>
         </Row>
         <Title>{item.title}</Title>
         <DescText>{item.desc}</DescText>
@@ -21,22 +21,23 @@ const ItemContainer = styled.a`
   position: relative;
   /* flex: 1; */
   width: calc(20% - 10px);
-  min-width: 274px;
+  min-width: 234px;
   height: 600px;
   padding: 5px;
   text-decoration: none;
-  @media (max-width: 1440px) {
+
+  @media (max-width: 1280px) {
     width: calc(33.33% - 10px);
-    min-width: 284px;
+    min-width: 254px;
     height: 500px;
   }
   @media (max-width: 960px) {
     width: calc(50% - 10px);
-    min-width: 294px;
+    min-width: 274px;
     height: 500px;
   }
   @media (max-width: 644px) {
-    width: calc(100% - 10px);
+    width: 450px;
     height: 500px;
   }
 `;
@@ -75,6 +76,10 @@ const Row = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 960px) {
+    height: 40%;
+  }
 `;
 
 const Title = styled.h2`
